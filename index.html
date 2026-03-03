@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nossa Retrospectiva 💚</title>
+  <meta name="description" content="Retrospectiva estilo Spotify Wrapped — melhores momentos do casal." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="assets/background.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="intro" id="intro" role="dialog" aria-modal="true">
+    <div class="intro-card">
+      <div class="intro-badge">
+        <span class="dot"></span>
+        <span>Retrospectiva</span>
+      </div>
+
+      <h1 class="intro-title">Nossa Retrospectiva 💚</h1>
+      <p class="intro-sub">
+        10 slides. 1 história. <br />
+        Feito com carinho só pra você.
+      </p>
+
+      <div class="intro-actions">
+        <button class="btn primary big" id="startBtn" type="button">Começar</button>
+        <button class="btn ghost big" id="muteBtn" type="button">Som: Off</button>
+      </div>
+
+      <p class="intro-hint">Dica: role para avançar. No celular, arraste para baixo.</p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand-title">Nossa Retrospectiva</span>
+      <span class="brand-sub">💚</span>
+    </div>
+
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <div class="actions">
+      <button class="pill" id="toTop" type="button">Início</button>
+      <button class="pill" id="toEnd" type="button">Final</button>
+      <button class="pill" id="musicBtn" type="button"><span id="musicLabel">Play</span></button>
+    </div>
+  </header>
+
+  <main class="scroller" id="scroller" aria-label="Retrospectiva em slides roláveis"></main>
+
+  <footer class="bottombar">
+    <button class="btn" id="prev" type="button">← Voltar</button>
+    <div class="hint">
+      Role (scroll) • ← → no teclado • Espaço = próximo
+      <div class="small">Slide <span id="count">1/10</span></div>
+    </div>
+    <button class="btn primary" id="next" type="button">Próximo →</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
